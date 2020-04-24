@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        input:required:invalid,
+        input:focus:invalid {
+            color: red;
+            background-color: yellow;
+            font-size: large;
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+        
+        input:required:valid {
+            color: white;
+            background-color: blue;
+            background-position: right top;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <h1>registration form</h1>
+    <form action="">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" required placeholder="please enter first name"><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" required placeholder="please enter last name">
+        <br>
+        <label for="email" name="email">Email</label>
+        <input type="email" name="email" id="em" required placeholder="please enter email">
+        <br>
+        <label for="phone">Phone number</label>
+        <input type="tel" name="phone" id="" required placeholder="please enter number">
+        <br>
+        <label>password</label>
+        <input type="password" name="password" id="" required placeholder="please enter password">
+        <br>
+        <label for="">Your Website:</label>
+        <input type="url" name="weblink" id="" required pattern="https?://.+" placeholder="your website is">
+        <br>
+        <label for="">Your age</label>
+        <input type="number" size="6" name="age" min="18" max="99" value="21">
+        <br>
+        <label for="">satisfaction</label>
+        <input type="range" name="satisfaction" id="" size="2" min="1" max="5" value="3">
+        <br>
+        <input type="submit" value="submit" name="submit">
+    </form>
+
+
+
+</body>
+
+</html>

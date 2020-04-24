@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form elements</title>
+
+</head>
+
+<body>
+    <form action="post" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" name="a" value="50">100+
+        <input type="range" id="b" name="b" value="50">=
+        <output name="x" for="a b"></output>
+
+        <br><br>
+        <select name="cars" id="">
+    <option value="mercedes"></option>
+    <option value="porsche"></option>
+    <option value="ford" selected></option>
+    <option value="mazda"></option>
+</select>
+        <br><br>
+
+        <textarea name="comments" id="" cols="30" rows="3">this is awesome car</textarea>
+        <br><br>
+        <button type="button" onclick="alert('hello world')">click</button>
+
+
+        <input type="Submit" name="Submit">
+    </form>
+</body>
+
+</html>

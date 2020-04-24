@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date validation </title>
+    <style>
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <form onsubmit="return checkForm(this);"></form>
+    <p><input type="text" id="terms" name="dob"></p>
+    <p><input type="text" name="time"></p>
+    <input type="submit">
+
+
+    <script>
+        function checkForm(form) {
+            //regular exxpresion to match the required date format
+            re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/
+            if (form.dob.value != "") {
+                //01234567
+                //12/13/70
+                regs = form.dob.value.toString()
+                    //store the month
+                m_regs = regs.substring(0, 2)
+                    //store the day
+                d_regs = regs.substring(3, 5)
+                    //store the year
+                y_regs = regs.substring(6)
+                    //show the date month and year in separate alerts
+                    //day val is between 1 and 31
+                if (d_regs[1] < 1 || d_regs[1] > 31) {
+                    alert("invalid value for day" + d_regs)
+                    form.dob.focus()
+                    return false
+                }
+                if (m_regs < 1 || m_regs > 12) {
+                    alert("invalid value for month" + m_regs)
+                    form.dob.focus()
+                    return false
+                }
+                //check val for year
+                if (y_regs > 20) {
+                    alert("invalid value for year" + y_regs)
+                    form.dob.focus()
+                    return false
+                }
+            }
+        }
+
+        // // if (form.dob.value != "" && form.dob.value.match(re)) {
+        //     {
+        //         alert("invalid date format" + form.dob.value)
+        //         form.dob.focus()
+        //         return false
+        //     }
+        //     re = /^\d{1,2}:\d{2}([ap]m)?$/
+        //     if (form.starttime.value != "" && !form.starttime.value.match(re)) {
+        //         alert("invalid time format" + form.starttime.value)
+        //         form.starttime.focus()
+        //         return false
+        //     }
+        // }
+
+        //}
+    </script>
+</body>
+
+</html>

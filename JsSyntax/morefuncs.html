@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>morefuncs</title>
+</head>
+
+<body>
+    <p id="sample">i am a par</p>
+
+
+
+    <script>
+        function addnums(val1, val2) {
+            return val1 + val2;
+        }
+        document.getElementById("sample").innerHTML = addnums(10, 20);
+
+        function toC(f) {
+            return (5 / 9) * (f - 32); //temp in celcius
+
+        }
+        document.getElementById("sample").innerHTML = toC(212);
+    </script>
+</body>
+
+</html>

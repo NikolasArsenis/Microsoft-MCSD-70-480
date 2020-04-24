@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class</title>
+    <style>
+        p::first-line {
+            color: #00ff00;
+            font-size: xx-large;
+        }
+        /* p::first-letter {
+            color: #00ff00;
+            font-size: xx-large;
+        } */
+        
+        p :first-child i {
+            color: red;
+        }
+        /* p i:first-child { 
+            color: red;
+        }*/
+        
+        input :focus {
+            background-color: yellow;
+        }
+        
+        p:first-child {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--  
+    <p>this is data</p>
+    <p>this is data</p>
+    <p>i am <i>in Red</i>and the next one is <i>not in red</i></p>
+    <p>i am also in <i>red</i><i>because i am the <i>first match onu in red</i></i>
+    </p>
+    <form action="">
+        <input type="text" name="fname">first name <br>
+        <input type="text" name="lname">last name <br>
+        <input type="submit" value="Submit">submit name <br>
+    </form>
+    -->
+    <p>in this case , the first letter which iis i wil be n big letters ad in green,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet necessitatibus molestias ipsum aliquam iusto mollitia praesentium alias ratione dolor velit, totam esse odio.
+        Amet ipsum officia ullam earum quod impedit?</p>
+</body>
+
+</html>

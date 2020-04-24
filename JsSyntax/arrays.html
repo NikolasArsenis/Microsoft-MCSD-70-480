@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays example</title>
+
+</head>
+
+<body>
+    <p id="sample"></p>
+
+
+    <script>
+        //var classes = ["Microsoft", "Oracle", "Cisco"]; //init this array
+        // document.getElementById("sample").innerHTML = classes //display contents of array
+        var classes = new Array("Microsoft", "Oracle", "Cisco"); //creates new array
+        //var stuff = ["John", "smith", 50]
+        // var person = {
+        //     firstname: "John",
+        //     lastname: "smith",
+        //     age: 46
+        // }
+
+        classes[classes.length] = "COMPtia+";
+        classes[classes.length] = "FIrewall+";
+        classes[classes.length] = "Skybase";
+
+        classes = classes.sort() //sort array in alphabetical order
+        var index; //var will be used to iter through the item
+        var text = "<ul>" //assign value of ul tag
+        for (index = 0; index < classes.length; index++) {
+            text += "<li>class now is" + classes[index] + "</li>"; //building the list
+        } //+= means whatever text is add whatever...
+        text += "</ul>"
+        document.getElementById("sample").innerHTML = text; //runs for loop and displays text
+
+        //document.getElementById("sample").innerHTML = classes[classes.length - 1]; //returns last element of array -1
+        //document.getElementById("sample").innerHTML = classes.sort(); //sorts all elements in line
+
+        // document.getElementById("sample").innerHTML = person.lastname //display property of object
+
+        //document.getElementById("sample").innerHTML = stuff[0] //display only [] specific item of array
+    </script>
+</body>
+
+</html>

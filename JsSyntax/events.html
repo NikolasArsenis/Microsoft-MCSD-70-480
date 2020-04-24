@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+
+</head>
+<p id="sample"></p>
+
+<body>
+
+    <!-- <button onclick="displayDate() "></button> -->
+    <!-- <button onkeydown="displayDate() "></button> -->
+    <p onclick="this.innerHTML='Works!'"></p>
+    <script>
+        function displayDate() {
+            document.getElementById("sample").innerHTML = Date();
+        }
+    </script>
+</body>
+
+</html>

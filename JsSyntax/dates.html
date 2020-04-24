@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dates example</title>
+
+</head>
+
+<body>
+    <p id="sample"></p>
+
+
+    <script>
+        //var d = new Date();//init date to a var called d... Epoch (zero time)1/1/70
+        // var d = new Date(86400); //display date in ms
+        //var d = new Date(99, 4, 2, 12, 56, 09, 5); //y-m-d-h-m-s-ms   very specific  date
+        //var d = new Date(15, 8, 19); //months is 0-11 january to december//
+        //var d = new Date(); //specific date
+
+        // var d = Date.parse("April 19,1995");
+        // document.getElementById("sample").innerHTML = d; //returns in ms the time has that passed since
+
+        // var days = ["Sunday", "Monday", "Tuesday", "Wednseday", "Thurdsday", "Friday", "Saturday"]
+        // document.getElementById("sample").innerHTML = days[d.getDay()]; //return day of an array
+
+
+        //document.getElementById("sample").innerHTML = d.toDateString();//convert tp string
+        // document.getElementById("sample").innerHTML = d.toUTCString(); //convert to UTC format
+        // document.getElementById("sample").innerHTML = d.getTime(); //get time in ms
+        //document.getElementById("sample").innerHTML = d.getFullYear(); //getfull year
+        // document.getElementById("sample").innerHTML = d.getDay; //get day
+        // document.getElementById("sample").innerHTML = d.getTime; //get time in ms
+
+        // d.setDate(29); //changes the day of the month with set date
+        // d.setDate(d.getDate() + 10); //takes the day and adds ten days
+        var today = new Date() //todays date
+        var someday = new Date(); //another time 
+        someday.setFullYear(2000, 0, 19);
+        if (someday > today) {
+            text = "Today is before Jan 19 2000";
+        } else {
+            text = "Today is after Jan 19 2000"
+        }
+        document.getElementById("sample").innerHTML = text;
+    </script>
+</body>
+
+</html>

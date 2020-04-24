@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+        }
+        
+        th {
+            text-align: left;
+        }
+        
+        table {
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 100%;">
+        <caption>impoortan numbers</caption>
+        <tr>
+            <td>Name:</td>
+            <td>John adams</td>
+        </tr>
+        <tr>
+            <th rowspan="2">telephone</th>
+            <td>310-255-332-15</td>
+        </tr>
+        <tr>
+            <td>213-654-848</td>
+        </tr>
+    </table>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <table style="width:100%">
+        <tr>
+            <th>name</th>
+            <th colspan="2">telephone</th>
+        </tr>
+        <tr>
+            <td>John Smith</td>
+            <th>310-22-55-66</th>
+            <th>123-13-13-123</th>
+        </tr>
+    </table>
+    <br/>
+    <table border="1" style="width: 100%;">
+        <tr>
+            <th>first name</th>
+            <th>last nane</th>
+            <th>score</th>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>john</td>
+            <td>100</td>
+
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>jim</td>
+            <td>b6</td>
+
+        </tr>
+    </table>
+</body>
+
+</html>

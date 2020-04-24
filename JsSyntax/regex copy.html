@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trap errors</title>
+
+</head>
+
+<body>
+
+    <p id="demo" type="text"></p>
+    <button type="button" onclick="process()">test input error</button>
+    <script>
+        function getPos() {
+            // var str = document.getElementById("sample").innerHTML
+            // var txt = str.replace(/website/i, "Microsoft")// i means that is not case sensitive
+            var text = "this is a test to se if this works ";
+            var finder = /works/.exec("this is a test to se if this works ")
+                //var pattern = /e/
+                //result = pattern.test("is the a letter e here")
+            document.getElementById("sample").innerHTML = finder
+
+            // var srch = str.search(/javascript/i)
+            // document.getElementById("sample").innerHTML = srch
+        }
+    </script>
+
+</body>
+
+</html>

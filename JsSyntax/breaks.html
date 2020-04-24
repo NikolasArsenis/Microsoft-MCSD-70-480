@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breaks</title>
+
+</head>
+
+<body>
+
+    <p id="sample"></p>
+    <script>
+        var i = 0
+        var text = ""
+        for (let i = 0; i < 10; i++) { //begin for loop
+            if (i == 3) {
+                text += "i was here <br/>"
+                continue;
+            }
+
+
+            // break exit loop if i=3
+            text += "the num is " + i + "<br/>"
+        }
+        document.getElementById("sample").innerHTML = text
+    </script>
+
+</body>
+
+</html>

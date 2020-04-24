@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <style>
+        /* child*/
+        
+        div+p {
+            background-color: yellow;
+        }
+        /* descedant*/
+        
+        div>p {
+            background-color: yellow;
+        }
+        /* adcescant*/
+        
+        div~p {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <p>para1</p>
+        <p>para2</p>
+        <span><p>para3</p></span>
+    </div>
+    <p>not in div</p>
+    <p>not in div</p>
+</body>
+
+</html>

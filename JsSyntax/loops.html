@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+
+</head>
+
+<body>
+
+    <p id="sample"></p>
+    <script>
+        var text = ""
+        fruits = ["apple", "orange", "lemon", "kiwi", "grapes", "watermelon", "tomato"];
+        // text += fruits[0] + "<br/>";
+        // text += fruits[1] + "<br/>";
+        // text += fruits[2] + "<br/>";
+
+        // for (index = 0; index < fruits.length; index++) {
+        //     text += fruits[index] + "<br/>";
+        // }
+
+        var startAt = 0
+        var endAt = fruits.length
+
+        while (startAt < endAt) {
+            text += fruits[startAt] + "<br/>"
+            startAt++
+        }
+        document.getElementById("sample").innerHTML = text;
+    </script>
+
+</body>
+
+</html>

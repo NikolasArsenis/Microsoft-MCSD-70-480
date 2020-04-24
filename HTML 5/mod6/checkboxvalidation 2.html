@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkboxvalidation2 </title>
+    <style>
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <form id="data" onsubmit="return checkForm(this);">
+        <p>
+            <input onchange="this.setCustomValidity(validity.valueMissing?'Please indicate that you accept the tcs':'');" id="terms" type="checkbox" name="terms">I accept the terms of aggreement</p>
+
+        <input type="submit">
+    </form>
+
+
+    <script>
+        // document.getElementById("terms").setCustomValidity("please indicate that you accept the tcs")
+        function checkForm(form) {
+            document.addEventListener("DOMContentLoaded", function name(params) {
+                var myForm = document.getElementById("data")
+                var checkForm = function(e) {
+                        if (!this.terms.checked) {
+                            alert("Please indicate that you have accepted the terms and conditions ")
+                            this.terms.focus()
+                            e.preventDefault()
+                            return
+                        }
+                    }
+                    //attach the form to the submit handler
+                myForm.addEventListener("submit", checkForm, true)
+
+                var myCheckbox = document.getElementById("terms")
+                var myCheckboxmsg = "Please indicate that you accepted the terms and conditions"
+                    //set the starting errror message
+                myCheckbox.setCustomValidity(myCheckboxmsg)
+                    //attach checkbox handler to toggle error message
+                myCheckbox.addEventListener("change", function() {
+                    this.setCustomValidity(this.validity.valueMissing ? myCheckboxmsg : ""), false
+                }, false)
+
+            })
+        }
+    </script>
+</body>
+
+</html>

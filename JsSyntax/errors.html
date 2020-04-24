@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trap errors</title>
+
+</head>
+
+<body>
+
+    <input type="text" id="demo">
+    <button type="button" onclick="process()">test input</button>
+    <p id="problems"></p>
+    <p id="noissues"></p>
+    <script>
+        function process() {
+            // var x = 1
+            // var y = 0
+            // var message = document.getElementById("results")
+            // message.innerHTML = "test"
+            var issues = 0 //count the issues
+            var message, x; //store the value of inpute and where the problems displayer
+            var message = document.getElementById("problems") //store element with id
+            message.innerHTML = "all is ok" //stores dispalys all is ok in the message var
+            var noissues = document.getElementById("noissues") //stores the noissues placeholder
+            x = document.getElementById("demo").value //stores value of input
+            try {
+                if (x == "") throw "empty" //throw an err..create an err
+                if (isNaN(x)) throw "is not a number"
+                if (x < 5) throw "too low"
+                if (x > 100) throw "too high"
+            } catch (err) {
+                message.innerHTML = "the problem is " + err
+                issues = 1
+            } finally {
+                if (issues < 1) {
+                    noissues.innerHTML = "there were no problems"
+                } else {
+                    noissues.innerHTML = "there were  problems"
+
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

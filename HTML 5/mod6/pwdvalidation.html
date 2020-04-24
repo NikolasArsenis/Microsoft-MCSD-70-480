@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwdvalidation </title>
+    <style>
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <form onsubmit="return checkForm(this);">
+        <p>name:<input type="text" name="username" placeholder="please enter username" required pattern="\w+"></p>
+        <p>password: <input type="password" name="pwd1" placeholder="please enter password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z].{6,}">
+        </p>
+        <p>confirm:<input type="password" name="pwd2" placeholder="please confirm password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z].{6,}"></p>
+
+        <input type="submit">
+    </form>
+
+
+    <script>
+        function checkPassword(str) {
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z].{6,})$/
+            return re.test(str)
+        }
+
+        function checkForm(form) {
+            if (form.username.value == "") {
+                alert("Username cannot be blank!")
+                form.username.focus()
+                return false
+            }
+            var re = /^\w+$/
+            if (!re.test(form.username.value)) {
+                alert("username must contain letters,numbers and underscores only")
+                form.username.focus()
+                return false
+            }
+            if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+                if (!checkPassword(form.pwd1.value)) {
+                    alert("password you entered was not valid")
+                    form.pwd1.focus()
+                    return false
+                } else {
+                    alert("confirm that you have entered and confirmed the password")
+                    form.pwd1.focus()
+                    return false
+                }
+            }
+            return true
+        }
+    </script>
+</body>
+
+</html>

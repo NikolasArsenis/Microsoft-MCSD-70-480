@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> compare</title>
+
+</head>
+
+<body>
+    <p id="sample"></p>
+
+
+    <script>
+        // var x = 10
+        // if (x === "8") { //== test //===verify value and type
+        // if (x !== "8") {//not equal to
+        // if (x <= 8) {
+        //     text = "its true"
+        // } else {
+        //     text = "its false"
+        // }
+        // text = (x <= 8) ? text = "lowscore" : "highscore"//if else in one line
+
+        //bitwise operations             (bin)  1111
+        //bitwise AND (multiply)               ----
+        //0 1 0 1 =0                              (dec) 8421 =15         
+        //0 0 0 1
+        //===========
+        //0 0 0 1=1(decimal)
+
+        //bitwise OR
+        //0 1 0 1 //if either top or bottom is one then is one
+        //0 0 0 1
+        //===========
+        //0 1 0 1=5(decimal)
+
+        //bitwise NOT
+        //0 1 0 1 //inverts all nums
+        //1 0 1 0= 10
+        //===========
+
+        //bitwise XOR
+        //0 1 0 1 //one of the two numbers must be one else is zero
+        //0 0 0 1
+        //===========
+        //0 1 0 0=4
+
+        //bitwise left shift
+        //0 1 0 1 //everything moves to the left
+        //...left shift...
+        //1 0 1 0 (dec) 10
+
+        //bitwise right shift
+        //0 1 0 1 //everything moves to the right and last 1 is dropped
+        //...right shift...
+        //0 0 1 0 (dec) 2
+
+        // x = 5 & 1
+        // x = -5bitwise not
+        // x = 5 ^ 1
+        // if (x == 4) { //bitwise XOR
+        // if (x = -5) { //bitwise not
+        // x = 5 << 1 //bitwise left shift
+        // if (x == 10) {//bitwise left shift
+        // x = 5 >> 1 //bitwise right shift
+        // if (x == 2) { //bitwise right shift
+        x = 5 >> 1 //bitwise right shift
+        if (x == 2) { //bitwise right shift
+            text = "true"
+        } else {
+            text = "false"
+        }
+
+        document.getElementById("sample").innerHTML = text
+    </script>
+
+</body>
+
+</html>

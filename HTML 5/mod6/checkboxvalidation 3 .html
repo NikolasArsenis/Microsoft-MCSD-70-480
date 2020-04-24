@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkboxvalidation3 </title>
+    <style>
+        input[type="checkbox"]:required {
+            display: none;
+        }
+        
+        input[type="checkbox"]:required:invalid+label:before {
+            content: "\2610";
+            padding-right: 0.2em;
+            font-size: 1.6em;
+            color: red;
+        }
+        
+        input[type="checkbox"]:required:valid+label:before {
+            content: "\2611";
+            padding-right: 0.2em;
+            font-size: 1.6em;
+            color: green;
+        }
+        /* input[type="checkbox"]:required:invalid+label {
+            color: red;
+        }
+        
+        input[type="checkbox"]:required:valid+label {
+            color: green;
+        } */
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <form>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">i accept the <u>terms and conditions</u></label>
+    </form>
+
+    <script>
+    </script>
+</body>
+
+</html>

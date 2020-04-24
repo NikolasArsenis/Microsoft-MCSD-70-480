@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> conditions</title>
+
+</head>
+
+<body>
+    <p id="sample"></p>
+
+
+    <script>
+        // var age = 60
+        // var greeting = ""
+
+        // if (age == 50) {
+        //     greeting = "its your birtday"
+        // } else if (age == 60) {
+        //     greeting = "you re 60"
+        // } else {
+        //     greeting = "its not yet"
+        // }
+        var d = new Date(99, 11, 31)
+        var today = d.getDate()
+        var greeting = ""
+        switch (today) {
+            case value:
+            case 0:
+                greeting = "Sunday"
+                break;
+            case 1:
+                greeting = "Monday"
+                break;
+            case 2:
+                greeting = "Tuesday"
+                break;
+            default:
+                greeting = "Friday"
+                    // case 3:
+                    //     greeting = "Wednesday"
+                    //     break;
+                    // case 4:
+                    //     greeting = "Thursday"
+                    //     break;
+                    // case 5:
+                    //     greeting = "Friday"
+                    //     break;
+                    // case 6:
+                    //     greeting = "Saturday"
+                    //     break;
+
+        }
+
+        document.getElementById("sample").innerHTML = greeting
+    </script>
+
+</body>
+
+</html>

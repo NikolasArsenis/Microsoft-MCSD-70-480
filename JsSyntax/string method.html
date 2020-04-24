@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string method</title>
+</head>
+
+<body>
+    <p id="sample">Please Locate where 'locate' occurs</p>
+    <button onclick="FindStr()">click me</button>
+    <p id="results"></p>
+
+    <script>
+        function FindStr() {
+            //var str = document.getElementById("sample").innerHTML;
+            //var str = "cake,cream,chocolate";
+            // var pos = str.indexOf("locate");
+            // var pos = str.lastindexOf("locate");
+            //var pos = str.search("locate");
+            // var res = str.slice(7, 13);
+
+            var stuff = "a,b,c,d,e,f";
+            var array = stuff.split(",");
+
+            var fullname = "john adams";
+            var spacepos = fullname.indexof(" ");
+            var firstname = fullname.slice(0, spacepos);
+            var lastname = fullname.slice(spacepos + 1);
+            // var results = fullname.replace("adams", "jones");
+            var results = fullname.toUpperCase();
+            var text1 = "item";
+            var text2 = "item2";
+            var combine = text1.concat(" ", text2);
+
+            document.getElementById("results").innerHTML = array(4);
+        }
+    </script>
+</body>
+
+</html>

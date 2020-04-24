@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors2</title>
+    <style>
+        /*a[href$=".jpg"] if the link contain .jpg give the style */
+        /* a[href$=".jpg"] {
+            color: white;
+            background-color: black;
+        } */
+        /* a[data-filetype~="image"]  ~means that the wrod image exists whether if theres space or not*/
+        /*a[href$=".jpg"] if the link contain .jpg give the style */
+        /* a[data-filetype~="image"] {
+            color: white;
+            background-color: black;
+        } */
+        /* input[type="radio"]:checked {
+            border: 1px solid black;
+        }
+        
+        input[type="checkbox"]:checked {
+            border: 1px solid black;
+            color: red;
+        } */
+        /* .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            font-size: 0;
+            height: 0;
+        } */
+        /* div:not(#noselect) {
+            color: black;
+            background-color: white;
+        }
+         /* only first line gets styled
+        p::first-line {
+           
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        li:nth-child(3) {
+            color: red;
+        }
+        
+        li:first-child {
+            color: green;
+        }
+        
+        li:last-child {
+            color: blue;
+        } */
+        
+        ol {
+            font-size: xx-large;
+            width: 200px;
+            background: #292929;
+            color: white;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+        /* this is for only one p not two */
+        
+        p:only-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="start.jpg" data-filetype=" internal image">image of a start</a>
+    <a href="skills.jpg">image of skill</a>
+    <a href="time.jpg">image of time</a>
+    <br>
+    <br>
+    <p>ranking</p><br>
+    <input type="radio" name="ranking">HIgh
+    <input type="radio" name="ranking">medium
+    <input type="radio" name="ranking">low
+    <br>
+    <br>
+    <p>style</p><br>
+
+    <input type="checkbox" name="style">Modern
+    <input type="checkbox" name="style">classic
+    <input type="checkbox" name="style">western -->
+
+    <!-- <p class="clearfix">this is a class para with text</p> -->
+    <!-- <p>some data <input class="clearfix" type="text"></p> -->
+
+    <!-- <div>
+         <p id="noselect">this is a test</p> 
+        <p>another test Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit cum veritatis eligendi eaque atque corporis impedit eius reprehenderit facere, nisi doloribus alias beatae delectus fugit eveniet porro repudiandae quos.</p>
+        <p>this is a test outside of div</p>
+
+    </div>
+    <p>this is a test outside of div</p> -->
+
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <div>
+        <p>my para inside of div</p>
+
+    </div>
+    <div>
+        <p>two para total</p>
+        <p>three para total</p>
+    </div>
+</body>
+
+</html>

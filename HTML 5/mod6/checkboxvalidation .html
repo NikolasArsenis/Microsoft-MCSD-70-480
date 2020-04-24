@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkboxvalidation </title>
+    <style>
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <form onsubmit="return checkForm(this);">
+        <p><input type="checkbox" name="terms">I accept the terms of aggreement</p>
+
+        <input type="submit">
+    </form>
+
+
+    <script>
+        function checkForm(form) {
+            if (!form.terms.checked) {
+                alert("please indicate that you accept the tcs")
+                form.terms.focus() //sets the focus on the terms of checkbox
+                return false
+            }
+            alert("you accepted the tcs")
+            return true
+        }
+    </script>
+</body>
+
+</html>

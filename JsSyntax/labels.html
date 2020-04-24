@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labels</title>
+
+</head>
+
+<body>
+
+    <p id="sample"></p>
+    <script>
+        var cars = ["bmw", "lambo", "toyota", "jaguar", "mercedes", "mg"]
+        var text = ""
+
+        list: { //label called list..labels are identified by:after the name of the label
+
+            text += cars[0] + "<br/>"
+            text += cars[1] + "<br/>"
+            text += cars[2] + "<br/>"
+
+            text += cars[3] + "<br/>"
+            break list
+            text += cars[4] + "<br/>"
+            text += cars[5] + "<br/>"
+
+        }
+        document.getElementById("sample").innerHTML = text
+    </script>
+
+</body>
+
+</html>
